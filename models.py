@@ -15,7 +15,6 @@ class Page(MPTTModel):
     subhead = models.CharField(_("Subhead"), max_length=300, blank=True,help_text=_("300 caract max"))
     parent = TreeForeignKey('self', null=True, blank=True, related_name='children')
     num = models.IntegerField(_("Order of the page"), help_text=_("Integer"))
-    logo = models.ImageField(_("Logo of the page"),blank=True, upload_to="upload/pages/logo")
     text = models.TextField(_("Text"),blank=True,)
 
     description = models.TextField(_("Description in meta"),blank=True,)
