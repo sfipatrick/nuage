@@ -4,9 +4,7 @@
 from django.utils.translation import ugettext_lazy as _
 from django.db import models
 from mptt.models import MPTTModel, TreeForeignKey
-from django.contrib.auth.models import User, Group
 
-from datetime import datetime, date
 
 
 class Page(MPTTModel):
