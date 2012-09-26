@@ -26,7 +26,6 @@ class Page(MPTTModel):
         fields =('id','title','url','level','lft','rght')
         d = dict((field, self.__dict__[field]) for field in fields)
         d["parent_id"] = (self.parent.id if self.parent else 0)
-
         return d
 
     def json(self):
@@ -59,7 +58,6 @@ class PageImage(models.Model):
         verbose_name = _('Image')
         verbose_name_plural = _('Images')
         ordering = ('num',)
-
 
     def __unicode__(self):
         return u'%s ' %(self.title)
